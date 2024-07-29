@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayNum=[11,12,13,14,15,16,17,18,19,20];
+        console.log("odd numbers");
+        let oddnumber=(odd)=>{
+            let result=[];
+            for(let a=0;a<odd.length;a++){
+                if(odd[a]%2!==0){
+                    result.push(arrayNum[a]);
+                }
+            }
+            return result;
+        };
+        console.log(oddnumber(arrayNum[a]));
+    </script>
+    <script>
+        console.log("")
+        let lang=["pyTHon is a programming langUAge"];
+        console.log("string to caps");
+        let caps=(wor)=>{
+            for(let bb=0;bb<wor.length;bb++){
+                let res=wor[bb].toString();
+                let data=res.toLowerCase().split("")
+                for(b=0;b<data.length;b++){
+                    data[b]=data[b].charAt(0).toUpperCase()+data[b].slice(1);
+                }
+                return data.join("")
+            }
+        }
+        console.log(caps(lang))
+    </script>
+    <script>
+        
+console.log(""); 
+console.log(" Sum:");
+
+var add = [1, 2, 3, 4, 15]; 
+var Sum = 0;
+let sum = (num) => {
+  let result = num.reduce((pre, val) => pre + val);
+  return result;
+};
+console.log("Total =", sum(add));
+
+    </script>
+    <script>
+    console.log(""); //This creates a space on the console
+console.log(" Prime numbers:-");
+
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let prime = (n) => {
+  let result = [];
+  for (p = 0; p < n.length; p++) {
+    let PN = 1;
+    if (number[p] === 0 || n[p] === 1) {
+      PN = 0;
+    } else if (PN === 1) {
+      for (x = 2; x <= n[p]; x++) {
+        if (n[p] % x == 0 && x !== n[p]) {
+          PN = 0;
+        }
+      }
+    }
+    if (PN === 1) {
+      result.push(n[p]);
+    }
+  }
+  return result;
+};
+console.log(prime(number));
+    </script>
+    <script>
+        console.log(""); 
+console.log("Palindromes:-");
+
+let word = ["Madam", "Amma", "Appa", "Guvi",  "School"];
+
+let palindromes = (w) => {
+  let result = [];
+  for (e of w) {
+    let letter = e.toLowerCase(); 
+    let reverse = letter.split("").reverse().join("");
+    if (letter === reverse) {
+      result.push(e);
+    }
+  }
+  return result.join(", ");
+};
+console.log(palindromes(word));
+    </script>
+    
+</body>
+</html>

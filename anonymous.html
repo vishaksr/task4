@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd numbers</title>
+</head>
+<body>
+    <script>
+        let arrayNumber = [1,2,3,4,5,6,7,8,9,10];
+        console.log("A. odd numbers");
+        for(a =0;a<arrayNumber.length;a++){
+            (function (odd){
+                if(odd %2!==0){
+                    console.log(arrayNumber[a]);
+                }
+            })
+            (arrayNumber[a]);
+        }
+        console.log("")
+        
+    </script>
+     <script>
+        let title =["javascript is a programming language"];
+        console.log("B.string to caps");
+        (function caps(wor){
+            for(let bb=0;bb<wor.length;bb++){
+                let res=wor[bb].toString();
+                let data =res.toLowerCase().split("")
+                for(b=0;b<data.lenth;b++){
+                    data[b]=data[b].charAt(0).toUpperCase()+data[b].slice(1);
+                }
+                console.log(data.join(" "))
+            }
+        })(title)
+
+        
+     </script>
+     <script>
+        console.log("")
+        console.log("sum:");
+        var add =[1,2,3,4,14];
+        var sum=0;
+        for(var i=0;i<add.length;i++){
+            (function (num){
+                sum+=num;
+            })(add[i]);
+        }
+        console.log("Total="+sum);
+     </script>
+     <script>
+        console.log("")
+        console.log("prime numbers:")
+        let numbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        for(i=1;i<numbers.length;i++){
+            (function text_prime(n){
+                if(n==1){
+                    return false;
+                }
+                else{
+                    for(x=2;x<n;x++){
+                        if(n%x===0){
+                            return false;
+                        }
+                    }
+                    console.log(n);
+                    return true;
+                }
+            }) (numbers[i]) 
+                }
+     </script>
+     <script>
+        console.log("")
+        console.log("palindromes:")
+        let words=["madam","amma","appa","guvi","school"];
+        (function(w){
+            for(let e=0;e<w.length;e++){
+                let letter=w[e].toLowerCase();
+                let reverse=letter.split("").reverse().join("");
+                if(letter===reverse) {
+                    console.log(w[e]);
+                }
+            }
+        }(words))
+     </script>b
+     <script>
+        console.log("")
+        console.log("median");
+        let arr1=[11,8,15,22,3];
+        let arr2=[50,1,4,33,14];
+        let arrSort=arr1.concat(arr2).sort(function(a,b){
+            return a-b;
+        })
+        let l=arrSort.length;
+        (function(arr,n){
+            if(n%2==0){
+                var z=n/2;
+                var e=arr[z];
+                var q=arr[z-1];
+                var ans=(e+q)/2;
+                console.log(ans);
+            }else{
+                let o=Math.floor(n/2);
+                console.log(arr[0]);
+            }
+        }(arrSort,1));
+     </script>
+     <script>
+        console.log("")
+        console.log("remove duplicate:");
+        let fruits=["apple","mango","apple","orange","mango"];
+        console.log("this is the original array",fruits);
+        (function(){
+            let remove=[];
+            for(g of fruits){
+                if(remove.indexOf(g)==-1){
+                    remove.push(g);
+                }
+
+                
+            }
+            console.log("answer",remove.join(","));
+        }());
+     </script>
+     <script>
+        console.log("")
+        console.log("rotate k times")
+        let arr=[1,2,3,4,5,6];
+        console.log("this is the original arrray,k=4",arr);
+        let arrL=arr.length;
+        let k=4;
+        (function(a,l,k){
+            for(let h=0;h<1;h++){
+                if(h<k){
+                    console.log(a[1+h-k])
+                }else{
+                    console.log(a[h-k])
+                }
+            }
+        }(arr,arrL,k))
+
+     </script>
+</body>
+</html>
